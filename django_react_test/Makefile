@@ -23,10 +23,10 @@ lint:
 	pre-commit run -a
 
 migrate:
-	cd ostrich; python manage.py makemigrations; python manage.py migrate
+	python manage.py makemigrations; python manage.py migrate
 
 shell:
-	cd ostrich; python manage.py shell -i ipython
+	python manage.py shell -i ipython
 
 client:
 	cd static/client; npm start
