@@ -2,11 +2,10 @@ from rest_framework import serializers
 from posts.models import Post
 
 
-class PostSerializer(serializer.Serializer):
-    id = serializers.IntegerField(read_only=True)
-    author = serializers.CharField(max_length=255)
-    title = serializers.CharField(max_length=255)
-    content = serializers.TextField()
+class PostSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Post
+        fields = ('id', 'author', 'title', 'content')
 
     def create(self, validated_data):
         """ Create a new post. """
