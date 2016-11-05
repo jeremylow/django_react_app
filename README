@@ -1,1 +1,9 @@
-simple app to test out using django and react (specifically react-create-app) together. see develop branch for work.
+Simple app to test out using django and react (specifically react-create-app) together. See develop branch for work.
+
+Notes:
+
+In order to run the client (frontend) server & backend (django) server together, add a 'proxy' key/val to static/client/package.json:
+
+    ...
+    "proxy": "http://127.0.0.1:8000"  // or "0.0.0.0:8000", but be sure to add 0.0.0.0 to settings.py -> ALLOWED_HOSTS
+    ...
