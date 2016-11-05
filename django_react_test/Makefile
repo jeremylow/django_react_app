@@ -29,10 +29,7 @@ shell:
 	python manage.py shell -i ipython
 
 client:
-	cd static/client; npm start
+	cd posts/static/posts/client; npm start
 
 server:
 	python manage.py runserver 0.0.0.0:8000
-
-work:
-	python manage.py runserver 0.0.0.0:8000 & cd static/client && npm start
