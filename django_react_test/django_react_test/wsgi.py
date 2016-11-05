@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 """
 WSGI config for django_react_test project.
 
